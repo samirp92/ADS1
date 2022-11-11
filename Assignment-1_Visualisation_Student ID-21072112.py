@@ -1,6 +1,6 @@
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
+import numpy as np   # Import the numpy library as np
+import pandas as pd  # Import the pandas library as pd
+import matplotlib.pyplot as plt # Import matplotlib.pyplot library as plt
 
 df = pd.read_csv('china_population.csv') # To load csv file
 print(df) # To print the data set
@@ -9,11 +9,11 @@ print(df) # To print the data set
 plt.figure(dpi = 300) # To create figure with required resolution
 plt.plot(df['Year'], df['Population'], label = 'Total Population') # To plot line graph of Year vs China's total population
 plt.plot(df['Year'], df['Urban Population'], label = 'Urban Population') # To plot line graph of Year vs Urban Population
-plt.xlim(1955, 2020)  # To set the range on x-axis        
+plt.xlim(1955, 2020)  # To set the limit on x-axis        
 plt.xlabel('Year', fontsize = 12) # To label the x-axis
 plt.ylabel('Population', fontsize = 12) # To label the y-axis
 plt.title('China Population', size = 16, color = 'black') # To give title of graph
-plt.legend() # To show the legend
+plt.legend() # To show the elements of the graph
 plt.grid()   # To show grid on graph
 plt.savefig('line_graph-1.jpeg', dpi = 300) # To save the graph
 plt.show()   # To show the graph 
